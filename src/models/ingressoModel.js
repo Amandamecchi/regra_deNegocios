@@ -5,6 +5,7 @@ const getIngressos = async () => {
   return result.rows;
 };
 
+
 const getIngressoById = async (id) => {
   const result = await pool.query('SELECT * FROM ingresso WHERE id = $1', [id]);
   return result.rows[0];
